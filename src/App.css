@@ -411,3 +411,82 @@ body {
     padding: 10px 15px;
   }
 }
+
+/* TARJETAS DEL CATÁLOGO */
+
+.juego-card {
+  background: #171725;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.juego-card:hover {
+  transform: translateY(-6px);
+  border-color: #a78bfa;
+}
+
+.juego-card-imagen {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.juego-card-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.juego-card-contenido {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.juego-genero {
+  color: #a78bfa;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.juego-card-contenido h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.juego-card-contenido p {
+  color: #b8b8c7;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.btn-favorito {
+  background: transparent;
+  color: #c4b5fd;
+  border: 1px solid #8b5cf6;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.btn-favorito:hover,
+.btn-favorito.activo {
+  background: #7c3aed;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .juego-card-imagen {
+    height: 220px;
+  }
+}
